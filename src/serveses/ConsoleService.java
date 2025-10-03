@@ -35,7 +35,7 @@ public class ConsoleService {
     public void updateClient()throws Exception{
         int id = Input.promptInt("Client ID to update: ");
         Client client = clientService.findClientById(id);
-        String name = Input.prompt("name ("+ client.id()+"): ");
+        String name = Input.prompt("name ("+ client.name()+"): ");
         if(name.isEmpty())name = client.name();
         String email = Input.prompt("email("+client.email()+"): ");
         if(email.isEmpty())email=client.email();
